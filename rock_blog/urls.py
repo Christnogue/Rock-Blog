@@ -20,12 +20,13 @@ from django.urls import path
 from . import views
 
 
-
 urlpatterns = [
     path('', include ('home.urls')),
     path('admin/', admin.site.urls),
-    path('profiles/', include ('perfiles.urls')),
-    path('pages/', include ('paginas.urls')),
+    path('perfiles/', include ('perfiles.urls')),
+    path('paginas/', include ('paginas.urls')),
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
+    path ('registro/', views.registro_view, name='registro'),
+    path ('mensaje/', views.mensaje_view, name='mensaje'),
 ]

@@ -4,7 +4,6 @@ from django.contrib.auth import login, logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 
-
 def index(request):
     context = {
         "latest_question_list": "",
@@ -37,6 +36,11 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('página_principal')
+
+def registro_view (request):
+    return render(request, "registro.html")
+
+
 
 
 # Create your views here.

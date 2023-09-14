@@ -16,3 +16,9 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('página_principal')
+
+def registro_view (request):
+        return render(request, "registro.html")
+    
+def mensaje_view (request):
+    return render(request, "mensaje.html")    
